@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF+6">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scal=1.0">
+        <title>Mohammad Sium</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/45b8960487.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+       <div id="header">
+            <div class="container">
+                <nav>
+                    <img src="images/logo_main_2.png" class ="logo">
+                    <ul id="sidemenu">
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <!--<li><a href="#services">Services</a></li>-->
+                        <li><a href="#portfolio">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <a href="https://github.com/MdSium003" target="_blank" class="buttongithub">Github</a>
+                        <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                    </ul>
+                    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                </nav>
+                <div class ="header-text">
+                    <p>Undergraduate Student</p>
+                    <h1>Hi, I am <Span>Sium<br></Span></h1>
+                    <h5>Studying in the Dept of CSE,<br>Bangladesh University of Engineering and Technology</h5>
+                </div>
+            </div>
+       </div>
+
+       <!--About Me-->
+       <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-column-one">
+                        <img src="images/Main_photo_2.jpg">
+                    </div>
+                    <div class="about-column-two">
+                        <h1 class="title-sub">About Me</h1>
+                        <p>
+                            Hello! My name is Mohammad Sium, and I am passionate about coding and problem-solving. I am currently studying Computer Science and Engineering at Bangladesh University of Engineering and Technology (BUET).<br> My interest in programming started back in my HSC days, and since then, I have been exploring different technologies and improving my skills every day. I love learning new things, whether it's algorithms, software development, or emerging technologies in the field of computer science. <br>I am always excited to take on new challenges, build innovative projects, and collaborate with like-minded individuals.
+                        </p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-tab" onclick="opentab('skills')">Skills</p>
+                            <!--<p class="tab-links" onclick="opentab('experience')">Experience</p>-->
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-content" id="skills">
+                            <ul>
+                                <li><span>Programming Languages</span><br>C, C++, C#, Java, Python</li>
+                                <li><span>Game Development</span><br>Unity, Unreal Engine</li>
+                                <li><span>Web Development</span><br>HTML, CSS, JavaScript</li>
+                            </ul>
+                        </div>
+                        <!--<div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>CSE2</span><br>Software develop</li>
+                                <li><span>CSE2</span><br>Software develop</li>
+                                <li><span>CSE2</span><br>Software develop</li>
+                            </ul>
+                        </div>-->
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>B.Sc. in Computer Science and Engineering</span><br>Bangladesh University of Engineering and Technology<br>November 2023 - ?</li>
+                                <li><span>Higher Secondary Certificate (HSC)</span><br>Dhaka City College, Dhaka<br>2022</li>
+                                <li><span>Secondary School Certificate (SSC)</span><br>Gandaria High School, Dhaka<br>2020</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       </div>
+
+
+       <!----------services-------->
+    <!--
+       <div id="services">
+            <div class="container">
+                <h1 class="title-sub">Services</h1>
+                <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-gamepad"></i>
+                    <h2>TIMMIT</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita adipisci autem consectetur ratione rem ducimus rerum corporis aperiam officiis voluptatum ex, dolore cum culpa amet quod doloribus at fuga! Eius?</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-gamepad"></i>
+                    <h2>TIMMIT</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita adipisci autem consectetur ratione rem ducimus rerum corporis aperiam officiis voluptatum ex, dolore cum culpa amet quod doloribus at fuga! Eius?</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-gamepad"></i>
+                    <h2>TIMMIT</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita adipisci autem consectetur ratione rem ducimus rerum corporis aperiam officiis voluptatum ex, dolore cum culpa amet quod doloribus at fuga! Eius?</p>
+                    <a href="#">Learn more</a>
+                </div>
+                </div>
+            </div>
+        </div> 
+    -->
+        <!-------portfolio---------------->
+
+        <div id="portfolio">
+            <div class="container">
+                <h1 class="title-sub">My Work</h1>
+                <div class="work-list">
+                    <div class="work">
+                        <img src="images/TIMMIT Trailer (Game using Unity) - 1280x720.jpg" alt="">
+                        <div class="layer">
+                            <h3>TIMMIT</h3>
+                            <p>TIMMIT was developed primarily for gamejam in a very short amount of time using UNITY</p>
+                            <a href="https://github.com/MdSium003/TIMMIT" target="_blank"><i class="fa-solid fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/Chess Game(1-1 Project) Using IGraphics - 1280x720.jpg" alt="">
+                        <div class="layer">
+                            <h3>Chess Game</h3>
+                            <p>Built my first project—a dynamic chess game using IGraphics, where strategy meets code!</p>
+                            <a href="https://github.com/MdSium003/Chess_game_Igraphics" target="_blank"><i class="fa-solid fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/Cricket_DataBase.png" alt="">
+                        <div class="layer">
+                            <h3>Cricket Database System</h3>
+                            <p>A comprehensive Java-based application designed to efficiently manage and organize cricket-related data</p>
+                            <a href="https://github.com/MdSium003/Database_Cricket" target="_blank"><i class="fa-solid fa-link"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <a href="https://github.com/MdSium003" target="_blank" class="button">See more on Github</a>
+            </div>
+        </div>
+
+        <!---------contact--------->
+
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="title-sub">Contact Me</h1>
+                        <p><i class="fa-solid fa-paper-plane"></i>mohammadsiumbuet@gmail.com</p>
+                        <p class="othermsg">Check out my other social accounts</p>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/Md.Sium.0003/" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                            <a href="https://www.instagram.com/mdsium003/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/mohammad-sium-3b1b48358/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://www.discordapp.com/users/1126486578810863657" target="_blank"><i class="fa-brands fa-discord"></i></a>
+                        </div>
+                    </div>
+                    <div class="contact-right">
+                        <form name="submit-to-google-sheet">
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="email" name="Email" placeholder="Your Email" required>
+                            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                            <button type="submit" class="button button2">Submit</button>
+                        </form>
+                        <span id="msg"></span>
+                </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>Design and Developed by Mohammad Sium <i class="fa-solid fa-heart"></i></p>
+            </div>
+        </div>
+
+       <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-tab");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-content");
+            }
+            event.currentTarget.classList.add("active-tab");
+            document.getElementById(tabname).classList.add("active-content");
+        }
+       </script>
+       <script>
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+       </script>
+       <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxUg3nUfUjMRQaMWYVfRclL62mrW8LoJpk5JcpxQPDRcazIKhJDSyxOD9pENDWd5ni1/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent successfully"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+    </body>
+</html>

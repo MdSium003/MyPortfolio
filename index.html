@@ -1,218 +1,590 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF+6">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scal=1.0">
-        <title>Mohammad Sium</title>
-        <link rel="stylesheet" href="style.css">
-        <script src="https://kit.fontawesome.com/45b8960487.js" crossorigin="anonymous"></script>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammad Sium — Software Developer & CS Engineer</title>
+    <meta name="description" content="Portfolio of Mohammad Sium — Computer Science & Engineering student at BUET. Full-stack developer, game developer, and AI enthusiast.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/45b8960487.js" crossorigin="anonymous"></script>
+</head>
 
-    <body>
-       <div id="header">
-            <div class="container">
-                <nav>
-                    <img src="images/logo_main_2.png" class ="logo">
-                    <ul id="sidemenu">
-                        <li><a href="#header">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <!--<li><a href="#services">Services</a></li>-->
-                        <li><a href="#portfolio">Projects</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <a href="https://github.com/MdSium003" target="_blank" class="buttongithub">Github</a>
-                        <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
-                    </ul>
-                    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-                </nav>
-                <div class ="header-text">
-                    <p>Undergraduate Student</p>
-                    <h1>Hi, I am <Span>Sium<br></Span></h1>
-                    <h5>Studying in the Dept of CSE,<br>Bangladesh University of Engineering and Technology</h5>
+<body>
+    <!-- Animated background particles -->
+    <div class="bg-particles" id="bgParticles"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#header" class="nav-logo">
+                <img src="images/logo_main_2.png" class="logo" alt="Sium Logo">
+            </a>
+            <ul id="sidemenu" class="nav-links">
+                <li><a href="#header" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#portfolio" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li>
+                    <a href="https://github.com/MdSium003" target="_blank" class="nav-btn" id="github-nav-btn">
+                        <i class="fa-brands fa-github"></i> GitHub
+                    </a>
+                </li>
+                <i class="fa-solid fa-xmark mobile-close" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars mobile-toggle" onclick="openmenu()"></i>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="header">
+        <div class="hero-container">
+            <div class="hero-content" id="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    Undergraduate Student @ BUET
+                </div>
+                <h1 class="hero-title">
+                    Hi, I'm <span class="gradient-text">Mohammad Sium</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Computer Science & Engineering student passionate about building innovative software, 
+                    games, and AI-powered applications. Always exploring the intersection of technology and creativity.
+                </p>
+                <div class="hero-actions">
+                    <a href="#portfolio" class="btn btn-primary" id="view-projects-btn">
+                        <i class="fa-solid fa-rocket"></i> View Projects
+                    </a>
+                    <a href="#contact" class="btn btn-outline" id="contact-btn">
+                        <i class="fa-solid fa-envelope"></i> Contact Me
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" id="stat-projects">6+</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="stat-tech">10+</span>
+                        <span class="stat-label">Technologies</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="stat-years">3+</span>
+                        <span class="stat-label">Years Coding</span>
+                    </div>
                 </div>
             </div>
-       </div>
+            <div class="hero-visual" id="hero-visual">
+                <div class="hero-image-wrapper">
+                    <img src="images/Main_photo_2.jpg" alt="Mohammad Sium" class="hero-image">
+                    <div class="hero-image-ring"></div>
+                    <div class="hero-image-ring ring-2"></div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator" id="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
 
-       <!--About Me-->
-       <div id="about">
-            <div class="container">
-                <div class="row">
-                    <div class="about-column-one">
-                        <img src="small_images/about.jpg">
+    <!-- About Section -->
+    <section id="about">
+        <div class="section-container">
+            <div class="section-header" id="about-header">
+                <span class="section-tag">Get to know me</span>
+                <h2 class="section-title">About Me</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-text" id="about-text">
+                    <p>
+                        Hello! My name is <strong>Mohammad Sium</strong>, and I am passionate about coding and problem-solving. 
+                        I am currently studying Computer Science and Engineering at 
+                        <strong>Bangladesh University of Engineering and Technology (BUET)</strong>.
+                    </p>
+                    <p>
+                        My interest in programming started back in my HSC days, and since then, I have been exploring 
+                        different technologies and improving my skills every day. I love learning new things, whether it's 
+                        algorithms, software development, or emerging technologies in the field of computer science.
+                    </p>
+                    <p>
+                        I am always excited to take on new challenges, build innovative projects, and collaborate with like-minded individuals.
+                    </p>
+                </div>
+                <div class="about-details" id="about-details">
+                    <!-- Tabs -->
+                    <div class="tab-bar" id="tab-bar">
+                        <button class="tab-btn active-tab" onclick="opentab('skills', this)" id="skills-tab-btn">
+                            <i class="fa-solid fa-code"></i> Skills
+                        </button>
+                        <button class="tab-btn" onclick="opentab('education', this)" id="education-tab-btn">
+                            <i class="fa-solid fa-graduation-cap"></i> Education
+                        </button>
                     </div>
-                    <div class="about-column-two">
-                        <h1 class="title-sub">About Me</h1>
-                        <p>
-                            Hello! My name is Mohammad Sium, and I am passionate about coding and problem-solving. I am currently studying Computer Science and Engineering at Bangladesh University of Engineering and Technology (BUET).<br> My interest in programming started back in my HSC days, and since then, I have been exploring different technologies and improving my skills every day. I love learning new things, whether it's algorithms, software development, or emerging technologies in the field of computer science. <br>I am always excited to take on new challenges, build innovative projects, and collaborate with like-minded individuals.
+
+                    <div class="tab-panel active-panel" id="skills">
+                        <div class="skill-group">
+                            <h4><i class="fa-solid fa-terminal"></i> Programming Languages</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">C</span>
+                                <span class="skill-tag">C++</span>
+                                <span class="skill-tag">C#</span>
+                                <span class="skill-tag">Java</span>
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">JavaScript</span>
+                            </div>
+                        </div>
+                        <div class="skill-group">
+                            <h4><i class="fa-solid fa-globe"></i> Web Development</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">React</span>
+                                <span class="skill-tag">Vite</span>
+                                <span class="skill-tag">HTML</span>
+                                <span class="skill-tag">CSS</span>
+                                <span class="skill-tag">Tailwind CSS</span>
+                                <span class="skill-tag">Node.js</span>
+                                <span class="skill-tag">Firebase</span>
+                            </div>
+                        </div>
+                        <div class="skill-group">
+                            <h4><i class="fa-solid fa-gamepad"></i> Game Development</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Unity</span>
+                                <span class="skill-tag">Unreal Engine</span>
+                            </div>
+                        </div>
+                        <div class="skill-group">
+                            <h4><i class="fa-solid fa-brain"></i> AI / ML</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">ONNX Runtime</span>
+                                <span class="skill-tag">Edge ML</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-panel" id="education">
+                        <div class="edu-card">
+                            <div class="edu-icon"><i class="fa-solid fa-university"></i></div>
+                            <div class="edu-info">
+                                <h4>B.Sc. in Computer Science & Engineering</h4>
+                                <p>Bangladesh University of Engineering and Technology</p>
+                                <span class="edu-date">November 2023 — Present</span>
+                            </div>
+                        </div>
+                        <div class="edu-card">
+                            <div class="edu-icon"><i class="fa-solid fa-school"></i></div>
+                            <div class="edu-info">
+                                <h4>Higher Secondary Certificate (HSC)</h4>
+                                <p>Dhaka City College, Dhaka</p>
+                                <span class="edu-date">2022</span>
+                            </div>
+                        </div>
+                        <div class="edu-card">
+                            <div class="edu-icon"><i class="fa-solid fa-school-flag"></i></div>
+                            <div class="edu-info">
+                                <h4>Secondary School Certificate (SSC)</h4>
+                                <p>Gandaria High School, Dhaka</p>
+                                <span class="edu-date">2020</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="portfolio">
+        <div class="section-container">
+            <div class="section-header" id="portfolio-header">
+                <span class="section-tag">Featured Work</span>
+                <h2 class="section-title">My Projects</h2>
+            </div>
+
+            <!-- Featured Projects (New) -->
+            <div class="featured-projects">
+
+                <!-- Gunjon -->
+                <div class="project-card featured" id="project-gunjon">
+                    <div class="project-image-wrap">
+                        <img src="images/gunjon.jpg" alt="Gunjon - Anonymous Messaging Platform" loading="lazy">
+                        <div class="project-overlay">
+                            <a href="https://www.gunjon.me" target="_blank" class="project-link-btn" id="gunjon-live-link">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live
+                            </a>
+                            <a href="https://github.com/MdSium003/Gunjon" target="_blank" class="project-link-btn" id="gunjon-github-link">
+                                <i class="fa-brands fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-badges">
+                            <span class="badge badge-featured">⭐ Featured</span>
+                            <span class="badge badge-live">🟢 Live</span>
+                        </div>
+                        <h3 class="project-title">Gunjon (গুঞ্জন)</h3>
+                        <p class="project-tagline">Speak Your Heart, Anonymously 🎙️✨</p>
+                        <p class="project-desc">
+                            A premium anonymous messaging platform with text & voice messages, Instagram Story integration, 
+                            fun voice filters (Robot, Chipmunk, Anime Girl), geolocation insights, DDoS protection, 
+                            and a powerful admin dashboard.
                         </p>
-                        <div class="tab-titles">
-                            <p class="tab-links active-tab" onclick="opentab('skills')">Skills</p>
-                            <!--<p class="tab-links" onclick="opentab('experience')">Experience</p>-->
-                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <div class="project-tech">
+                            <span>React 19</span>
+                            <span>Vite 7</span>
+                            <span>Firebase</span>
+                            <span>Tailwind CSS</span>
+                            <span>Framer Motion</span>
+                            <span>Cloud Functions</span>
                         </div>
-                        <div class="tab-contents active-content" id="skills">
-                            <ul>
-                                <li><span>Programming Languages</span><br>C, C++, C#, Java, Python</li>
-                                <li><span>Game Development</span><br>Unity, Unreal Engine</li>
-                                <li><span>Web Development</span><br>HTML, CSS, JavaScript</li>
-                            </ul>
+                    </div>
+                </div>
+
+                <!-- Manga Colorizer -->
+                <div class="project-card featured" id="project-manga">
+                    <div class="project-image-wrap">
+                        <img src="images/manga-color.png" alt="Manga Colorizer - AI Colorization Tool" loading="lazy">
+                        <div class="project-overlay">
+                            <a href="https://mdsium003.github.io/manga-colorizer/" target="_blank" class="project-link-btn" id="manga-live-link">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live
+                            </a>
+                            <a href="https://github.com/MdSium003/manga-colorizer" target="_blank" class="project-link-btn" id="manga-github-link">
+                                <i class="fa-brands fa-github"></i> Code
+                            </a>
                         </div>
-                        <!--<div class="tab-contents" id="experience">
-                            <ul>
-                                <li><span>CSE2</span><br>Software develop</li>
-                                <li><span>CSE2</span><br>Software develop</li>
-                                <li><span>CSE2</span><br>Software develop</li>
-                            </ul>
-                        </div>-->
-                        <div class="tab-contents" id="education">
-                            <ul>
-                                <li><span>B.Sc. in Computer Science and Engineering</span><br>Bangladesh University of Engineering and Technology<br>November 2023 - ?</li>
-                                <li><span>Higher Secondary Certificate (HSC)</span><br>Dhaka City College, Dhaka<br>2022</li>
-                                <li><span>Secondary School Certificate (SSC)</span><br>Gandaria High School, Dhaka<br>2020</li>
-                            </ul>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-badges">
+                            <span class="badge badge-featured">⭐ Featured</span>
+                            <span class="badge badge-ai">🤖 AI</span>
+                        </div>
+                        <h3 class="project-title">COLOR-PANEL AI</h3>
+                        <p class="project-tagline">Manga Colorizer — Edge ML in the Browser</p>
+                        <p class="project-desc">
+                            A professional-grade web app for interactive manga lineart colorization using Edge-ML. 
+                            Features interactive hinting, GPU-accelerated ONNX inference, lineart preservation 
+                            via Multiply blend mode, and a manga-studio inspired UI.
+                        </p>
+                        <div class="project-tech">
+                            <span>React 19</span>
+                            <span>ONNX Runtime</span>
+                            <span>WebGPU</span>
+                            <span>Web Workers</span>
+                            <span>Vite</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CivicMoncho -->
+                <div class="project-card featured" id="project-civic">
+                    <div class="project-image-wrap">
+                        <img src="images/civicmoncho.png" alt="CivicMoncho - Civic Engagement Platform" loading="lazy">
+                        <div class="project-overlay">
+                            <a href="https://github.com/MdSium003" target="_blank" class="project-link-btn" id="civic-github-link">
+                                <i class="fa-brands fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-badges">
+                            <span class="badge badge-featured">⭐ Featured</span>
+                            <span class="badge badge-fullstack">🔥 Full-Stack</span>
+                        </div>
+                        <h3 class="project-title">CivicMoncho 🏛️</h3>
+                        <p class="project-tagline">Empowering Citizens Through Digital Democracy</p>
+                        <p class="project-desc">
+                            A comprehensive civic engagement platform with project voting, event management, 
+                            bilingual Bengali & English support, certificate generation, targeted notifications, 
+                            and dual-role system for citizens & government officials.
+                        </p>
+                        <div class="project-tech">
+                            <span>React 18</span>
+                            <span>TypeScript</span>
+                            <span>Node.js</span>
+                            <span>PostgreSQL</span>
+                            <span>Drizzle ORM</span>
+                            <span>Tailwind CSS</span>
                         </div>
                     </div>
                 </div>
             </div>
-       </div>
 
-
-       <!----------services-------->
-    <!--
-       <div id="services">
-            <div class="container">
-                <h1 class="title-sub">Services</h1>
-                <div class="services-list">
-                <div>
-                    <i class="fa-solid fa-gamepad"></i>
-                    <h2>TIMMIT</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita adipisci autem consectetur ratione rem ducimus rerum corporis aperiam officiis voluptatum ex, dolore cum culpa amet quod doloribus at fuga! Eius?</p>
-                    <a href="#">Learn more</a>
+            <!-- Other Projects Grid -->
+            <h3 class="other-projects-heading" id="other-projects-heading">Other Notable Projects</h3>
+            <div class="projects-grid">
+                <div class="project-card-mini" id="project-timmit">
+                    <div class="project-image-wrap">
+                        <img src="images/TIMMIT Trailer (Game using Unity) - 1280x720.jpg" alt="TIMMIT Game" loading="lazy">
+                        <div class="project-overlay">
+                            <a href="https://github.com/MdSium003/TIMMIT" target="_blank" class="project-link-btn" id="timmit-link">
+                                <i class="fa-brands fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">TIMMIT</h3>
+                        <p class="project-desc">A fast-paced game developed for a game jam in a very short amount of time using Unity Engine.</p>
+                        <div class="project-tech">
+                            <span>Unity</span>
+                            <span>C#</span>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <i class="fa-solid fa-gamepad"></i>
-                    <h2>TIMMIT</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita adipisci autem consectetur ratione rem ducimus rerum corporis aperiam officiis voluptatum ex, dolore cum culpa amet quod doloribus at fuga! Eius?</p>
-                    <a href="#">Learn more</a>
+                <div class="project-card-mini" id="project-chess">
+                    <div class="project-image-wrap">
+                        <img src="images/Chess Game(1-1 Project) Using IGraphics - 1280x720.jpg" alt="Chess Game" loading="lazy">
+                        <div class="project-overlay">
+                            <a href="https://github.com/MdSium003/Chess_game_Igraphics" target="_blank" class="project-link-btn" id="chess-link">
+                                <i class="fa-brands fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Chess Game</h3>
+                        <p class="project-desc">A dynamic chess game built using IGraphics — where strategy meets code!</p>
+                        <div class="project-tech">
+                            <span>C++</span>
+                            <span>IGraphics</span>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <i class="fa-solid fa-gamepad"></i>
-                    <h2>TIMMIT</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita adipisci autem consectetur ratione rem ducimus rerum corporis aperiam officiis voluptatum ex, dolore cum culpa amet quod doloribus at fuga! Eius?</p>
-                    <a href="#">Learn more</a>
-                </div>
+                <div class="project-card-mini" id="project-cricket">
+                    <div class="project-image-wrap">
+                        <img src="images/Cricket_DataBase.png" alt="Cricket Database System" loading="lazy">
+                        <div class="project-overlay">
+                            <a href="https://github.com/MdSium003/Database_Cricket" target="_blank" class="project-link-btn" id="cricket-link">
+                                <i class="fa-brands fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Cricket Database</h3>
+                        <p class="project-desc">A comprehensive Java-based application designed to manage and organize cricket-related data.</p>
+                        <div class="project-tech">
+                            <span>Java</span>
+                            <span>Database</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div> 
-    -->
-        <!-------portfolio---------------->
 
-        <div id="portfolio">
-            <div class="container">
-                <h1 class="title-sub">My Work</h1>
-                <div class="work-list">
-                    <div class="work">
-                        <img src="images/TIMMIT Trailer (Game using Unity) - 1280x720.jpg" alt="">
-                        <div class="layer">
-                            <h3>TIMMIT</h3>
-                            <p>TIMMIT was developed primarily for gamejam in a very short amount of time using UNITY</p>
-                            <a href="https://github.com/MdSium003/TIMMIT" target="_blank"><i class="fa-solid fa-link"></i></a>
+            <a href="https://github.com/MdSium003" target="_blank" class="btn btn-outline btn-center" id="see-more-btn">
+                <i class="fa-brands fa-github"></i> See More on GitHub
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="section-container">
+            <div class="section-header" id="contact-header">
+                <span class="section-tag">Get in touch</span>
+                <h2 class="section-title">Contact Me</h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info" id="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>mohammadsiumbuet@gmail.com</p>
                         </div>
                     </div>
-                    <div class="work">
-                        <img src="images/Chess Game(1-1 Project) Using IGraphics - 1280x720.jpg" alt="">
-                        <div class="layer">
-                            <h3>Chess Game</h3>
-                            <p>Built my first project—a dynamic chess game using IGraphics, where strategy meets code!</p>
-                            <a href="https://github.com/MdSium003/Chess_game_Igraphics" target="_blank"><i class="fa-solid fa-link"></i></a>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Dhaka, Bangladesh</p>
                         </div>
                     </div>
-                    <div class="work">
-                        <img src="images/Cricket_DataBase.png" alt="">
-                        <div class="layer">
-                            <h3>Cricket Database System</h3>
-                            <p>A comprehensive Java-based application designed to efficiently manage and organize cricket-related data</p>
-                            <a href="https://github.com/MdSium003/Database_Cricket" target="_blank"><i class="fa-solid fa-link"></i></a>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fa-solid fa-graduation-cap"></i>
                         </div>
+                        <div>
+                            <h4>University</h4>
+                            <p>BUET — CSE Department</p>
+                        </div>
+                    </div>
+
+                    <p class="social-heading">Connect with me</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/Md.Sium.0003/" target="_blank" class="social-btn" id="social-fb" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/mdsium003/" target="_blank" class="social-btn" id="social-ig" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/mohammad-sium-3b1b48358/" target="_blank" class="social-btn" id="social-li" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.discordapp.com/users/1126486578810863657" target="_blank" class="social-btn" id="social-dc" aria-label="Discord">
+                            <i class="fa-brands fa-discord"></i>
+                        </a>
+                        <a href="https://github.com/MdSium003" target="_blank" class="social-btn" id="social-gh" aria-label="GitHub">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
                     </div>
                 </div>
-                <a href="https://github.com/MdSium003" target="_blank" class="button">See more on Github</a>
+                <div class="contact-form-wrap" id="contact-form-wrap">
+                    <form name="submit-to-google-sheet" id="contact-form">
+                        <div class="form-group">
+                            <label for="name-input">Your Name</label>
+                            <input type="text" name="Name" id="name-input" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email-input">Your Email</label>
+                            <input type="email" name="Email" id="email-input" placeholder="john@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message-input">Message</label>
+                            <textarea name="Message" id="message-input" rows="5" placeholder="Write your message here..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit" id="submit-btn">
+                            <i class="fa-solid fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
             </div>
         </div>
+    </section>
 
-        <!---------contact--------->
-
-        <div id="contact">
-            <div class="container">
-                <div class="row">
-                    <div class="contact-left">
-                        <h1 class="title-sub">Contact Me</h1>
-                        <p><i class="fa-solid fa-paper-plane"></i>mohammadsiumbuet@gmail.com</p>
-                        <p class="othermsg">Check out my other social accounts</p>
-                        <div class="social-icons">
-                            <a href="https://www.facebook.com/Md.Sium.0003/" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
-                            <a href="https://www.instagram.com/mdsium003/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
-                            <a href="https://www.linkedin.com/in/mohammad-sium-3b1b48358/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                            <a href="https://www.discordapp.com/users/1126486578810863657" target="_blank"><i class="fa-brands fa-discord"></i></a>
-                        </div>
-                    </div>
-                    <div class="contact-right">
-                        <form name="submit-to-google-sheet">
-                            <input type="text" name="Name" placeholder="Your Name" required>
-                            <input type="email" name="Email" placeholder="Your Email" required>
-                            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                            <button type="submit" class="button button2">Submit</button>
-                        </form>
-                        <span id="msg"></span>
-                </div>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>Design and Developed by Mohammad Sium <i class="fa-solid fa-heart"></i></p>
-            </div>
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="footer-content">
+            <p>Designed & Developed by <strong>Mohammad Sium</strong> <i class="fa-solid fa-heart"></i></p>
         </div>
+    </footer>
 
-       <script>
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
+    <!-- Scripts -->
+    <script>
+        // --- Tab System ---
+        function opentab(tabname, btn) {
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active-tab'));
+            document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active-panel'));
+            btn.classList.add('active-tab');
+            document.getElementById(tabname).classList.add('active-panel');
+        }
 
-        function opentab(tabname){
-            for(tablink of tablinks){
-                tablink.classList.remove("active-tab");
+        // --- Mobile Menu ---
+        const sidemenu = document.getElementById("sidemenu");
+        function openmenu() { sidemenu.classList.add('open'); }
+        function closemenu() { sidemenu.classList.remove('open'); }
+
+        // Close mobile menu on link click
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', closemenu);
+        });
+
+        // --- Navbar scroll effect ---
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
             }
-            for(tabcontent of tabcontents){
-                tabcontent.classList.remove("active-content");
+        });
+
+        // --- Intersection Observer for animations ---
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.project-card, .project-card-mini, .section-header, .about-text, .about-details, .contact-info, .contact-form-wrap, .hero-content, .hero-visual').forEach(el => {
+            el.classList.add('animate-target');
+            observer.observe(el);
+        });
+
+        // --- Active nav link on scroll ---
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 200;
+                if (scrollY >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // --- Floating particles ---
+        function createParticles() {
+            const container = document.getElementById('bgParticles');
+            for (let i = 0; i < 40; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 8 + 's';
+                particle.style.animationDuration = (8 + Math.random() * 12) + 's';
+                const size = 2 + Math.random() * 4;
+                particle.style.width = size + 'px';
+                particle.style.height = size + 'px';
+                container.appendChild(particle);
             }
-            event.currentTarget.classList.add("active-tab");
-            document.getElementById(tabname).classList.add("active-content");
         }
-       </script>
-       <script>
-        var sidemenu = document.getElementById("sidemenu");
-        function openmenu(){
-            sidemenu.style.right = "0";
-        }
-        function closemenu(){
-            sidemenu.style.right = "-200px";
-        }
-       </script>
-       <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbxUg3nUfUjMRQaMWYVfRclL62mrW8LoJpk5JcpxQPDRcazIKhJDSyxOD9pENDWd5ni1/exec'
-        const form = document.forms['submit-to-google-sheet']
-        const msg = document.getElementById("msg")
-      
+        createParticles();
+
+        // --- Contact Form Submission ---
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxUg3nUfUjMRQaMWYVfRclL62mrW8LoJpk5JcpxQPDRcazIKhJDSyxOD9pENDWd5ni1/exec';
+        const form = document.forms['submit-to-google-sheet'];
+        const msg = document.getElementById("msg");
+
         form.addEventListener('submit', e => {
-          e.preventDefault()
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => {
-                msg.innerHTML = "Message sent successfully"
-                setTimeout(function(){
-                    msg.innerHTML = ""
-                },5000)
-                form.reset()
-            })
-            .catch(error => console.error('Error!', error.message))
-        })
-      </script>
-    </body>
+            e.preventDefault();
+            const submitBtn = document.getElementById('submit-btn');
+            submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+            submitBtn.disabled = true;
+
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "✅ Message sent successfully!";
+                    msg.className = 'msg-success';
+                    setTimeout(() => { msg.innerHTML = ""; msg.className = ''; }, 5000);
+                    form.reset();
+                    submitBtn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Send Message';
+                    submitBtn.disabled = false;
+                })
+                .catch(error => {
+                    msg.innerHTML = "❌ Error sending message. Please try again.";
+                    msg.className = 'msg-error';
+                    submitBtn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Send Message';
+                    submitBtn.disabled = false;
+                });
+        });
+
+        // --- Smooth reveal on page load ---
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+        });
+    </script>
+</body>
 </html>
